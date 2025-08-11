@@ -20,7 +20,7 @@ export default function ToggleSwitch({
   function handleToggle() {
     setPos((prev) => {
       const nextPos = prev === 0 ? 1 : 0;
-      onToggle(nextPos);
+      onToggle();
       return nextPos;
     });
   }

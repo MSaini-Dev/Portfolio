@@ -1,7 +1,5 @@
-import React from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { motion } from 'framer-motion'
-// import ThemeToggle from '../components/ThemeToggle'
 
 const Header = () => {
   const location = useLocation()
@@ -35,7 +33,6 @@ const Header = () => {
                  
                 </Link>
             ))}
-          {/* <ThemeToggle className="fixed top-4 right-4 z-50" /> */}
         </nav>
     </motion.header>
   )

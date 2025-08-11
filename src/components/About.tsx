@@ -1,7 +1,4 @@
 import { motion } from 'framer-motion'
-// import SplitTextp from "../components/SplitTextp" 
-// import SplitTextLines from "../components/SplitTextLines"
-// import { TextReveal } from "../components/magicui/text-reveal";
 import FlipLink from "../components/ui/text-effect-flipper"
 
 const About = () => {

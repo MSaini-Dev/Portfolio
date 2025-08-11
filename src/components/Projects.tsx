@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "framer-motion";
 import FlipLink from "./ui/text-effect-flipper"
 import { ArrowRight ,ArrowUpRight } from 'lucide-react';

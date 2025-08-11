@@ -1,8 +1,5 @@
-// import React from 'react'
 import { motion } from 'framer-motion'
 import bg from "../assets/Background colour _ blue colours _ gradient _ texture - Copy.jpeg"
-// import bg from "../assets/ccdb99f97ec073910823147f6d015e5f.jpg"
-// import bg2 from "../assets/black and white color GIF by Erica Anderson.gif"
 import FullscreenToggle from "../components/toggleFullscreen"
 import {TextScroll} from "../components/ui/text-scroll"
 

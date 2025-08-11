@@ -26,7 +26,7 @@ const TechSlider = () => {
         href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
       />
 
-      <style jsx>{`
+      <style >{`
         @keyframes scroll {
           0% {
             transform: translateX(0);
