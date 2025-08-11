@@ -49,20 +49,22 @@ const WorkPage = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
     >
-      <motion.div
-        className=" text-white mt-30 mb-12 text-center w-3/4 flex flex-col justify-center items-center gap-4 bg-black"
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.3 }}
-      >
-        <FlipLink href="https://x.com/guri_who">My work</FlipLink>
-        <p className="w-200 text-white/54"
-        style={{ fontSize: "14px" }}
-        >
-          A glimpse into my journey, skills, and passion for building digital
-          solutions that merge design elegance with technical precision.
-        </p>
-      </motion.div>
+ <motion.div 
+  className="text-white mt-16 md:mt-24 lg:mt-30 mb-8 md:mb-10 lg:mb-12 text-center w-full max-w-xs sm:max-w-sm md:max-w-2xl lg:max-w-4xl flex flex-col justify-center items-center gap-3 md:gap-4 lg:gap-6 bg-black px-4 md:px-6 lg:px-8"
+  initial={{ opacity: 0, y: 30 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8, delay: 0.3 }}
+>
+  <FlipLink href="https://x.com/guri_who">My work</FlipLink>
+  
+  <p 
+    className="text-white/54 w-full leading-relaxed"
+    style={{ fontSize: "14px", lineHeight: "1.6" }}
+  >
+    A glimpse into my journey, skills, and passion for building digital
+    solutions that merge design elegance with technical precision.
+  </p>
+</motion.div>
 
       <div className="w-full  columns-[600px] gap-3">
         {projects.map((project, index) => (
