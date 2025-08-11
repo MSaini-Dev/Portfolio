@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "framer-motion";
 import FlipLink from "../components/ui/text-effect-flipper";
 import { ArrowUpRight } from "lucide-react";
@@ -19,7 +18,7 @@ const WorkPage = () => {
           option2="Light"
           duration={500}
           bgColor="bg-white"
-          onToggle={(pos) => console.log("New position:", pos)}
+          onToggle={() => console.log("New position")}
         />
       ),
     },

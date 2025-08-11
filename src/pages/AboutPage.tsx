@@ -1,7 +1,5 @@
 import { motion } from "framer-motion";
 
-// import SplitTextLines from "../components/SplitTextLines";
-// import SplitTextp from "../components/SplitTextp";
 import FlipLink from "../components/ui/text-effect-flipper"
 import TechSlider from "../components/work/TechSlider";
 import "devicon/devicon.min.css";
