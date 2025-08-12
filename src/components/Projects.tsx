@@ -1,14 +1,26 @@
 import { motion } from "framer-motion";
 import FlipLink from "./ui/text-effect-flipper"
 import { ArrowRight ,ArrowUpRight } from 'lucide-react';
+import ToggleSwitch from "../components/work/work1";
+import TechSlider from "../components/work/TechSlider";
+import Card from "../components/work/Card";
 const Projects = () => {
-  const projects = [
+const projects = [
     {
       id: 1,
       title: "E-Commerce Platform",
       description: "A modern e-commerce platform built with React and Node.js",
       image: "https://via.placeholder.com/400x300",
       tags: ["React", "Node.js", "MongoDB"],
+      comp: (
+        <ToggleSwitch
+          option1="Dark"
+          option2="Light"
+          duration={500}
+          bgColor="bg-white"
+          onToggle={() => console.log("New position")}
+        />
+      ),
     },
     {
       id: 2,
@@ -17,6 +29,7 @@ const Projects = () => {
         "A collaborative task management application with real-time updates",
       image: "https://via.placeholder.com/400x300",
       tags: ["Vue.js", "Socket.io", "PostgreSQL"],
+      comp: <TechSlider />,
     },
     {
       id: 3,
@@ -24,6 +37,7 @@ const Projects = () => {
       description: "A responsive portfolio website with dark mode support",
       image: "https://via.placeholder.com/400x300",
       tags: ["React", "Tailwind CSS", "Framer Motion"],
+      comp: <Card />,
     },
   ];
 
