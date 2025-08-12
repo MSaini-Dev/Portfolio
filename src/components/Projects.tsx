@@ -46,42 +46,58 @@ const Projects = () => {
         <FlipLink href="https://x.com/guri_who">Feature Work</FlipLink>
       </motion.h2>
 
-      <div className="w-full flex flex-col justify-center items-center gap-8 p-3">
+       <div className="w-full  columns-[600px] gap-3">
         {projects.map((project, index) => (
           <motion.div
             key={project.id}
-            className=" w-full h-fit flex flex-col justify-center items-start bg-card border border-border rounded-lg overflow-hidden hover:shadow-lg transition-shadow "
+            className="w-full h-fit mb-3 md:mb-4 lg:mb-6 flex bg-black flex-col justify-center items-start border border-border rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: index * 0.2 }}
           >
-            <motion.div className="relative w-full aspect-video border border-border rounded-lg overflow-hidden ">
-            <div className="absolute top-3 left-3 flex flex-wrap gap-2">
-              {project.tags.map((tag) => (
-                <span
-                  key={tag}
-                          className='px-3 py-1 text-sm  bg-white/10 backdrop-blur-lg border border-white/20 rounded-md shadow-lg text-white hover:bg-gray-500/20 transition-colors z-10'
-                >
-                  {tag}
-                </span>
-              ))}
-            </div>
-            <button className="absolute top-3 right-3  p-1  w-fit h-fit text-sm bg-white/10 backdrop-blur-lg border border-white/20 rounded-md shadow-lg text-white hover:bg-gray-500/20 transition-colors z-10 flex">
-            <ArrowUpRight />
-            </button>
+            <motion.div className="relative w-full aspect-video border border-border rounded-lg overflow-hidden flex justify-center items-center">
+              {/* Tags - Responsive positioning and sizing */}
+              <div className="absolute top-2 left-2 md:top-3 md:left-3 flex flex-wrap gap-1 md:gap-2 max-w-[60%] sm:max-w-[70%]">
+                {project.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="px-2 py-1 md:px-3 md:py-1 bg-white/10 backdrop-blur-lg border border-white/20 rounded-md shadow-lg text-white hover:bg-gray-500/20 transition-colors z-10 truncate"
+                    style={{ fontSize: "14px" }}
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+
+              {/* Project Component */}
+              {project.comp}
+
+              {/* Action Button - Responsive sizing */}
+              <button className="absolute top-2 right-2 md:top-3 md:right-3 p-1 md:p-2 w-fit h-fit bg-white/10 backdrop-blur-lg border border-white/20 rounded-md shadow-lg text-white hover:bg-gray-500/20 transition-colors z-10 flex items-center justify-center">
+                <ArrowUpRight className="w-4 h-4 md:w-5 md:h-5" />
+              </button>
             </motion.div>
 
-            <div className="p-2 ml-2">
-              <h3 className="text-white font-semibold mb-1">{project.title}</h3>
-              <p className="text-white/54 ">
+            {/* Content Section - Responsive padding and typography */}
+            <div className="p-3 md:p-4 lg:p-5 w-full">
+              <h3
+                className="text-white font-semibold mb-2 md:mb-3 leading-tight"
+                style={{ fontSize: "16px" }}
+              >
+                {project.title}
+              </h3>
+              <p
+                className="text-white/54 leading-relaxed"
+                style={{ fontSize: "14px", lineHeight: "1.5" }}
+              >
                 {project.description}
               </p>
             </div>
           </motion.div>
         ))}
       </div>
-      <motion.button className="flex justify-center items-center">See all<ArrowRight /></motion.button>
+      <motion.a href="/work" className="flex justify-center items-center">See all<ArrowRight /></motion.a>
     </motion.section>
   );
 };

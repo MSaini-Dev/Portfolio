@@ -24,16 +24,17 @@ const Thanks = () => {
       </motion.p>
       
       <motion.p 
-        className='text-white/54 max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-4xl w-full px-4'
+        className='text-white/54 max-w-xs sm:max-w-md md:max-w-xl lg:max-w-2xl w-full px-4'
         style={{ fontSize: '14px', lineHeight: '1.6' }}
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.4 }}
       >
-        I truly appreciate you taking the time to explore my work. Every project here reflects my passion for creating, problem-solving, and delivering meaningful results. If something caught your eye, or if you have an idea we could bring to life together.
+        I truly appreciate you taking the time to explore my work. Every project here reflects my passion for creating, problem-solving, and delivering meaningful results. If you have an idea we could bring to life together.
       </motion.p>
       
-      <motion.button
+      <motion.a
+      href='/contact'
         className='px-4 py-2 md:px-6 md:py-3 lg:px-8 lg:py-3 font-semibold text-white bg-white/10 backdrop-blur-lg border border-white/20 rounded-xl shadow-lg hover:bg-white/20 transition-all duration-300 z-10 mt-2 md:mt-4'
         style={{ fontSize: '14px' }}
         initial={{ opacity: 0, scale: 0.8 }}
@@ -43,7 +44,7 @@ const Thanks = () => {
         whileTap={{ scale: 0.95 }}
       >
         Let's Connect
-      </motion.button>
+      </motion.a>
     </motion.section>
   )
 }

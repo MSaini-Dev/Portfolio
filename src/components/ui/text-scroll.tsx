@@ -9,7 +9,7 @@ import {
   useVelocity,
 } from "framer-motion"
 
-import { cn } from "../../lib/utils"
+import { cn } from "@/lib/utils"
 
 interface TextScrollProps {
   text: string
@@ -73,7 +73,7 @@ export const TextScroll: React.FC<TextScrollProps> = ({
     const x = useTransform(baseX, (v) => `${wrap(-100 / repetitions, 0, v)}%`)
 
     const directionFactor = useRef<number>(1)
-    useAnimationFrame(( delta) => {
+    useAnimationFrame((t, delta) => {
       let moveBy = directionFactor.current * baseVelocity * (delta / 1000)
 
       if (velocityFactor.get() < 0) {
@@ -89,29 +89,26 @@ export const TextScroll: React.FC<TextScrollProps> = ({
 
     return (
       <div
-        className="relative w-full overflow-hidden whitespace-nowrap"
+        className="w-full overflow-hidden whitespace-nowrap"
         ref={containerRef}
       >
-        <motion.div className={cn("inline-block font-light", className)} style={{ x }}>
+        <motion.div className={cn("inline-block", className)} style={{ x }}>
           {Array.from({ length: repetitions }).map((_, i) => (
-            <span className="font-normal text-white/80 " key={i} ref={i === 0 ? textRef : null}>
+            <span key={i} ref={i === 0 ? textRef : null}>
               {children}{" "}
             </span>
           ))}
         </motion.div>
-        <div className="absolute inset-0 bg-gradient-to-r from-black via-white/0 to-black"></div>
       </div>
     )
   }
 
   return (
-    <section className="relative w-full font-normal text-white/54">
+    <section className="relative w-full">
       <ParallaxText baseVelocity={default_velocity} className={className}>
         {text}
       </ParallaxText>
-      {/* <ParallaxText baseVelocity={-default_velocity} className={className}>
-        {text}
-      </ParallaxText> */}
+      
     </section>
   )
 }

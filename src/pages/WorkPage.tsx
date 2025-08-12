@@ -43,13 +43,13 @@ const WorkPage = () => {
 
   return (
     <motion.div
-      className="py-10 px-3 w-full flex flex-col justify-start items-center bg-black"
+      className="pt-24 pb-8 px-3 w-full flex flex-col justify-start items-center bg-black"
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
     >
  <motion.div 
-  className="text-white mt-16 md:mt-24 lg:mt-30 mb-8 md:mb-10 lg:mb-12 text-center w-full max-w-xs sm:max-w-sm md:max-w-2xl lg:max-w-4xl flex flex-col justify-center items-center gap-3 md:gap-4 lg:gap-6 bg-black px-4 md:px-6 lg:px-8"
+  className="text-white  mb-8 md:mb-10 lg:mb-12 text-center w-full max-w-xs sm:max-w-sm md:max-w-2xl lg:max-w-4xl flex flex-col justify-center items-center gap-3 md:gap-4 lg:gap-6 bg-black px-4 md:px-6 lg:px-8"
   initial={{ opacity: 0, y: 30 }}
   animate={{ opacity: 1, y: 0 }}
   transition={{ duration: 0.8, delay: 0.3 }}
