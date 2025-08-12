@@ -38,12 +38,15 @@ function Model() {
   const { viewport } = useThree()
   const texture = useTexture("/brush.png")
   const meshRefs = useRef<(THREE.Mesh | null)[]>([])
-  const [meshes, setMeshes] = useState<JSX.Element[]>([])
+ const [meshes, setMeshes] = useState<React.ReactElement[]>([])
+
+
   const mouse = useMouse()
   const device = useDimension()
   const [prevMouse, setPrevMouse] = useState({ x: 0, y: 0 })
   const [currentWave, setCurrentWave] = useState(0)
-  const { gl, camera } = useThree()
+  const { camera } = useThree()
+
 
   const scene = new THREE.Scene()
   const max = 100

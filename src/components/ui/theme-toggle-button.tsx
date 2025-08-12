@@ -2,13 +2,10 @@ import React from "react"
 import { MoonIcon, SunIcon } from "lucide-react"
 import { useTheme } from "next-themes"
 
-import { Button } from "@/components/ui/button"
+import { Button } from "./button"
+import type { AnimationStart, AnimationVariant } from "./theme-animations"
+import { createAnimation } from "./theme-animations"
 
-import {
-  AnimationStart,
-  AnimationVariant,
-  createAnimation,
-} from "./theme-animations"
 
 interface ThemeToggleAnimationProps {
   variant?: AnimationVariant
