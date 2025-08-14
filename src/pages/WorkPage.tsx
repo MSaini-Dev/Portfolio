@@ -3,15 +3,18 @@ import FlipLink from "../components/ui/text-effect-flipper";
 import { ArrowUpRight } from "lucide-react";
 import ToggleSwitch from "../components/work/work1";
 import TechSlider from "../components/work/TechSlider";
-import Card from "../components/work/Card";
+import BackgroundContainer from "../components/work/BackgroundContainer";
+import bgImage from "../assets/Background colour _ blue colours _ gradient _ texture - Copy.jpeg"
+import maskImage from "../assets/gif.gif"
+// import Card from "../components/work/Card";
 const WorkPage = () => {
   const projects = [
     {
       id: 1,
-      title: "E-Commerce Platform",
-      description: "A modern e-commerce platform built with React and Node.js",
+      title: "Toggle Button",
+      description: "A toggle Button use mix-blend-difference property",
       image: "https://via.placeholder.com/400x300",
-      tags: ["React", "Node.js", "MongoDB"],
+      tags: ["Component","React js", "mix-blend-difference"],
       comp: (
         <ToggleSwitch
           option1="Dark"
@@ -24,22 +27,30 @@ const WorkPage = () => {
     },
     {
       id: 2,
-      title: "Task Management App",
+      title: "Infinite Logo Scroll",
       description:
-        "A collaborative task management application with real-time updates",
+        "A infinite image scroll use devicon for icon",
       image: "https://via.placeholder.com/400x300",
-      tags: ["Vue.js", "Socket.io", "PostgreSQL"],
+      tags: ["Component","React js", "Devicon"],
       comp: <TechSlider />,
     },
     {
       id: 3,
-      title: "Portfolio Website",
-      description: "A responsive portfolio website with dark mode support",
+      title: "MaskReveal",
+      description:
+        "Reveals content through an ink-like mask",
       image: "https://via.placeholder.com/400x300",
-      tags: ["React", "Tailwind CSS", "Framer Motion"],
-      comp: <Card />,
+      tags: ["Component","React js", "Mask Image"],
+      comp: <BackgroundContainer bg={bgImage} zIndex="10" mask={maskImage} className="rounded-xl shadow-lg flex justify-end items-end" >
+      <div className="p-6 text-white flex flex-col justify-end items-end z-20">
+        <h2 className="text-2xl font-bold">Hello World</h2>
+        <p>This is inside the card!</p>
+      </div>
+    </BackgroundContainer>,
     },
+    
   ];
+
 
   return (
     <motion.div
@@ -81,7 +92,7 @@ const WorkPage = () => {
                 {project.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="px-2 py-1 md:px-3 md:py-1 bg-white/10 backdrop-blur-lg border border-white/20 rounded-md shadow-lg text-white hover:bg-gray-500/20 transition-colors z-10 truncate"
+                    className="px-2 py-1 md:px-3 md:py-1  bg-white/10 backdrop-blur-lg border border-white/20 rounded-md shadow-lg text-white hover:bg-gray-500/20 transition-colors z-50 truncate"
                     style={{ fontSize: "14px" }}
                   >
                     {tag}

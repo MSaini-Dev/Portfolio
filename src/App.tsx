@@ -14,7 +14,7 @@ function App() {
         <Header />
         
         
-        <main className="container mx-auto">
+        <main className="container min-w-full">
           <Routes>
             <Route path="/" element={<LandingPage />} />
             <Route path="/about" element={<AboutPage />} />

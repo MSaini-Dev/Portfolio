@@ -3,15 +3,18 @@ import FlipLink from "./ui/text-effect-flipper"
 import { ArrowRight ,ArrowUpRight } from 'lucide-react';
 import ToggleSwitch from "../components/work/work1";
 import TechSlider from "../components/work/TechSlider";
-import Card from "../components/work/Card";
+import BackgroundContainer from "./work/BackgroundContainer";
+import bgImage from "../assets/Background colour _ blue colours _ gradient _ texture - Copy.jpeg"
+import maskImage from "../assets/gif.gif"
+
 const Projects = () => {
 const projects = [
     {
       id: 1,
-      title: "E-Commerce Platform",
-      description: "A modern e-commerce platform built with React and Node.js",
+      title: "Toggle Button",
+      description: "A toggle Button use mix-blend-difference property",
       image: "https://via.placeholder.com/400x300",
-      tags: ["React", "Node.js", "MongoDB"],
+      tags: ["Component","React js", "mix-blend-difference"],
       comp: (
         <ToggleSwitch
           option1="Dark"
@@ -24,21 +27,28 @@ const projects = [
     },
     {
       id: 2,
-      title: "Task Management App",
+      title: "Infinite Logo Scroll",
       description:
-        "A collaborative task management application with real-time updates",
+        "A infinite image scroll use devicon for icon",
       image: "https://via.placeholder.com/400x300",
-      tags: ["Vue.js", "Socket.io", "PostgreSQL"],
+      tags: ["Component","React js", "Devicon"],
       comp: <TechSlider />,
     },
     {
       id: 3,
-      title: "Portfolio Website",
-      description: "A responsive portfolio website with dark mode support",
+      title: "MaskReveal",
+      description:
+        "Reveals content through an ink-like mask",
       image: "https://via.placeholder.com/400x300",
-      tags: ["React", "Tailwind CSS", "Framer Motion"],
-      comp: <Card />,
+      tags: ["Component","React js", "Mask Iamge"],
+      comp: <BackgroundContainer bg={bgImage} zIndex="10" mask={maskImage} className="rounded-xl shadow-lg flex justify-end items-end" >
+      <div className="p-6 text-white flex flex-col justify-end items-end z-20">
+        <h2 className="text-2xl font-bold">Hello World</h2>
+        <p>This is inside the card!</p>
+      </div>
+    </BackgroundContainer>,
     },
+    
   ];
 
   return (
@@ -70,13 +80,13 @@ const projects = [
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: index * 0.2 }}
           >
-            <motion.div className="relative w-full aspect-video border border-border rounded-lg overflow-hidden flex justify-center items-center">
+            <motion.div className="relative w-full aspect-video  border border-border rounded-lg overflow-hidden flex justify-center items-center">
               {/* Tags - Responsive positioning and sizing */}
               <div className="absolute top-2 left-2 md:top-3 md:left-3 flex flex-wrap gap-1 md:gap-2 max-w-[60%] sm:max-w-[70%]">
                 {project.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="px-2 py-1 md:px-3 md:py-1 bg-white/10 backdrop-blur-lg border border-white/20 rounded-md shadow-lg text-white hover:bg-gray-500/20 transition-colors z-10 truncate"
+                    className="px-2 py-1+ z-30 md:px-3 md:py-1 bg-white/10 backdrop-blur-lg border border-white/20 rounded-md shadow-lg text-white hover:bg-gray-500/20 transition-colors truncate"
                     style={{ fontSize: "14px" }}
                   >
                     {tag}
