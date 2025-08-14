@@ -7,6 +7,7 @@ import BackgroundContainer from "./work/BackgroundContainer";
 import bgImage from "../assets/Background colour _ blue colours _ gradient _ texture - Copy.jpeg"
 import maskImage from "../assets/gif.gif"
 
+import InteractiveGlowBox from "./work/InteractiveGlowBox"
 const Projects = () => {
 const projects = [
     {
@@ -47,6 +48,15 @@ const projects = [
         <p>This is inside the card!</p>
       </div>
     </BackgroundContainer>,
+    },{
+      id: 4,
+      title: "InteractiveGlowBox",
+      description:
+        "Reveals content through an ink-like mask",
+      image: "https://via.placeholder.com/400x300",
+      tags: ["Component","React js", "Mask Iamge"],
+      comp: 
+      <InteractiveGlowBox backgroundImage={bgImage} className="rounded-2xl"/>
     },
     
   ];
@@ -80,7 +90,7 @@ const projects = [
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: index * 0.2 }}
           >
-            <motion.div className="relative w-full aspect-video  border border-border rounded-lg overflow-hidden flex justify-center items-center">
+            <motion.div className="relative w-full aspect-video  border border-border rounded-lg overflow-hidden flex justify-center items-center bg-transparent">
               {/* Tags - Responsive positioning and sizing */}
               <div className="absolute top-2 left-2 md:top-3 md:left-3 flex flex-wrap gap-1 md:gap-2 max-w-[60%] sm:max-w-[70%]">
                 {project.tags.map((tag) => (
