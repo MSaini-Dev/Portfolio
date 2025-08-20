@@ -7,8 +7,11 @@ import BackgroundContainer from "../components/work/BackgroundContainer";
 import bgImage from "../assets/Background colour _ blue colours _ gradient _ texture - Copy.jpeg"
 import maskImage from "../assets/gif.gif"
 // import Card from "../components/work/Card";
+import InteractiveGlowBox from "../components/work/InteractiveGlowBox"
+
 const WorkPage = () => {
-  const projects = [
+
+const projects = [
     {
       id: 1,
       title: "Toggle Button",
@@ -40,13 +43,22 @@ const WorkPage = () => {
       description:
         "Reveals content through an ink-like mask",
       image: "https://via.placeholder.com/400x300",
-      tags: ["Component","React js", "Mask Image"],
+      tags: ["Component","React js", "Mask Iamge"],
       comp: <BackgroundContainer bg={bgImage} zIndex="10" mask={maskImage} className="rounded-xl shadow-lg flex justify-end items-end" >
       <div className="p-6 text-white flex flex-col justify-end items-end z-20">
         <h2 className="text-2xl font-bold">Hello World</h2>
         <p>This is inside the card!</p>
       </div>
     </BackgroundContainer>,
+    },{
+      id: 4,
+      title: "InteractiveGlowBox",
+      description:
+        "Reveals content through an ink-like mask",
+      image: "https://via.placeholder.com/400x300",
+      tags: ["Component","React js", "Mask Iamge"],
+      comp: 
+      <InteractiveGlowBox backgroundImage={bgImage} className="rounded-2xl"/>
     },
     
   ];

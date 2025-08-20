@@ -59,7 +59,7 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.6 }}
         >
           <motion.a
-            href="/cv.pdf" // place your CV in /public
+            href="https://drive.google.com/uc?export=download&id=13dRyHlON_-hR1G-iKc9F2AvAYWwMnQ0T" // place your CV in /public
             download
             className="px-6 py-3 text-sm bg-white/10 backdrop-blur-lg border border-white/20 rounded-xl shadow-lg text-white hover:bg-gray-500/20 transition-colors z-10"
             whileHover={{ scale: 1.05 }}

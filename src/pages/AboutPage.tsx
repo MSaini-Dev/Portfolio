@@ -106,7 +106,7 @@ const AboutPage = () => {
           <div className="flex flex-col items-center text-center p-4 sm:p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 sm:col-span-2 lg:col-span-1">
             <h3 className="text-lg sm:text-xl font-semibold text-white mb-2">Tools</h3>
             <p className="text-sm sm:text-base text-white/60">
-              Git, Docker, AWS, Vercel, Figma
+              Git, Cursor, VS Code, Vercel, Figma
             </p>
           </div>
         </motion.div>

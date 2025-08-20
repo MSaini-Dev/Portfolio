@@ -10,7 +10,7 @@ import ContactPage from './pages/ContactPage'
 function App() {
   return (
     <ThemeProvider defaultTheme="system">
-      <div className="min-h-screen max-w-screen bg-background text-foreground">
+      <div className="min-h-screen max-w-screen bg-black text-white">
         <Header />
         
         
