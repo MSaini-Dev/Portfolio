@@ -64,4 +64,4 @@ Clone and run this project locally:
 git clone https://github.com/MSaini-Dev/Portfolio.git
 cd Portfolio
 npm install
-npm run dev
+npm run dev  
