@@ -27,12 +27,6 @@ This site showcases my projects, skills, and experience as a **MERN stack & fron
 
 ---
 
-## 📷 Preview
-
-![Portfolio Screenshot](https://portfolio-mohit-saini.vercel.app/preview.png) <!-- replace with actual screenshot later -->
-
----
-
 ## 🚀 Getting Started
 
 Clone the repository and run locally:
