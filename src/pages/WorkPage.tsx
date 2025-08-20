@@ -8,7 +8,7 @@ import bgImage from "../assets/Background colour _ blue colours _ gradient _ tex
 import maskImage from "../assets/gif.gif"
 // import Card from "../components/work/Card";
 import InteractiveGlowBox from "../components/work/InteractiveGlowBox"
-
+import { Helmet } from "react-helmet-async";
 const WorkPage = () => {
 
 const projects = [
@@ -65,6 +65,19 @@ const projects = [
 
 
   return (
+    <>    <Helmet>
+        <title>Projects - Mohit Saini</title>
+        <meta
+          name="description"
+          content="Explore projects by Mohit Saini including BookFair, ClipCrate, and ChatAI. Full-stack apps built with React, Node.js, and modern tools."
+        />
+        <meta name="keywords" content="Mohit Saini Projects, BookFair, ClipCrate, ChatAI, React, Node.js" />
+        <meta property="og:title" content="Projects - Mohit Saini" />
+        <meta property="og:description" content="Showcasing full-stack and frontend projects built by Mohit Saini." />
+        <meta property="og:url" content="https://portfolio-mohit-saini.vercel.app/projects" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://portfolio-mohit-saini.vercel.app/preview.png" />
+      </Helmet>
     <motion.div
       className="pt-24 pb-8 px-3 w-full flex flex-col justify-start items-center bg-black"
       initial={{ opacity: 0, y: 50 }}
@@ -140,6 +153,7 @@ const projects = [
         ))}
       </div>
     </motion.div>
+    </>
   );
 };
 

@@ -6,9 +6,11 @@ import LandingPage from './pages/LandingPage'
 import AboutPage from './pages/AboutPage'
 import WorkPage from './pages/WorkPage'
 import ContactPage from './pages/ContactPage'
+import { HelmetProvider } from 'react-helmet-async'
 
 function App() {
   return (
+    <HelmetProvider>
     <ThemeProvider defaultTheme="system">
       <div className="min-h-screen max-w-screen bg-black text-white">
         <Header />
@@ -26,6 +28,7 @@ function App() {
         <Footer />
       </div>
     </ThemeProvider>
+    </HelmetProvider>
   )
 }
 

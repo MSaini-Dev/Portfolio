@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import FlipLink from "../components/ui/text-effect-flipper"
-
+import { Helmet } from "react-helmet-async";
 const ContactPage = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -40,6 +40,20 @@ const ContactPage = () => {
   }
 
   return (
+    <>
+    <Helmet>
+        <title>Contact - Mohit Saini</title>
+        <meta
+          name="description"
+          content="Get in touch with Mohit Saini. Contact via email, LinkedIn, or GitHub for collaboration and opportunities."
+        />
+        <meta name="keywords" content="Contact Mohit Saini, Email, LinkedIn, GitHub, Web Developer" />
+        <meta property="og:title" content="Contact - Mohit Saini" />
+        <meta property="og:description" content="Connect with Mohit Saini through email, LinkedIn, or GitHub." />
+        <meta property="og:url" content="https://portfolio-mohit-saini.vercel.app/contact" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://portfolio-mohit-saini.vercel.app/preview.png" />
+      </Helmet>
     <motion.div
       className="min-h-screen pt-24 pb-8 px-4 sm:px-6 lg:px-8 flex flex-col justify-start items-center"
       initial={{ opacity: 0, y: 50 }}
@@ -165,6 +179,7 @@ const ContactPage = () => {
         )}
       </motion.form>
     </motion.div>
+    </>
   )
 }
 

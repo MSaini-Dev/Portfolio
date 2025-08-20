@@ -2,9 +2,24 @@ import { motion } from "framer-motion";
 import FlipLink from "../components/ui/text-effect-flipper"
 import TechSlider from "../components/work/TechSlider";
 import "devicon/devicon.min.css";
+import { Helmet } from "react-helmet-async";
 
 const AboutPage = () => {
   return (
+    <> 
+    <Helmet>
+        <title>About - Mohit Saini</title>
+        <meta
+          name="description"
+          content="Learn more about Mohit Saini, a Frontend Developer passionate about React, MERN stack, and building modern web apps."
+        />
+        <meta name="keywords" content="About Mohit Saini, Frontend Developer, Web Developer, React, MERN" />
+        <meta property="og:title" content="About - Mohit Saini" />
+        <meta property="og:description" content="Know more about Mohit Saini, frontend developer and MERN stack enthusiast." />
+        <meta property="og:url" content="https://portfolio-mohit-saini.vercel.app/about" />
+        <meta property="og:type" content="profile" />
+        <meta property="og:image" content="https://portfolio-mohit-saini.vercel.app/preview.png" />
+      </Helmet>
     <motion.div
       className="min-h-screen w-full flex flex-col justify-start items-center pt-24  pb-8 sm:pb-12 lg:pb-16 px-4 sm:px-6 lg:px-8"
       initial={{ opacity: 0, y: 50 }}
@@ -112,6 +127,7 @@ const AboutPage = () => {
         </motion.div>
       </motion.div>
     </motion.div>
+  </>
   );
 };
 
