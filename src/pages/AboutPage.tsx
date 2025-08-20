@@ -35,7 +35,7 @@ const AboutPage = () => {
         {/* Header Section */}
         <div className="w-full flex flex-col justify-center items-center gap-4 sm:gap-6 text-center">
           <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
-            <FlipLink href="https://x.com/guri_who">About me</FlipLink>
+            <FlipLink href="">About me</FlipLink>
           </div>
           <p className="max-w-2xl text-sm sm:text-base lg:text-lg text-white/54 px-2">
             A curated collection of projects that blend creativity with functionality, 

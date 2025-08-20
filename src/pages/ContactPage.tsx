@@ -68,7 +68,7 @@ const ContactPage = () => {
         transition={{ duration: 0.8, delay: 0.2 }}
       >
         <div className="text-2xl sm:text-3xl md:text-4xl">
-          <FlipLink href="https://x.com/guri_who">Contact me</FlipLink>
+          <FlipLink href="">Contact me</FlipLink>
         </div>
         <p className="text-sm sm:text-base text-white/54 max-w-lg px-2">
           Whether you have an idea to discuss, a project to build, or simply want to connect,

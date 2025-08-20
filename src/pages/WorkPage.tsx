@@ -9,6 +9,7 @@ import maskImage from "../assets/gif.gif"
 // import Card from "../components/work/Card";
 import InteractiveGlowBox from "../components/work/InteractiveGlowBox"
 import { Helmet } from "react-helmet-async";
+
 const WorkPage = () => {
 
 const projects = [
@@ -18,6 +19,7 @@ const projects = [
       description: "A toggle Button use mix-blend-difference property",
       image: "https://via.placeholder.com/400x300",
       tags: ["Component","React js", "mix-blend-difference"],
+      githubUrl: "https://github.com/MSaini-Dev/React-Components/tree/main/ToggleButton",
       comp: (
         <ToggleSwitch
           option1="Dark"
@@ -35,6 +37,7 @@ const projects = [
         "A infinite image scroll use devicon for icon",
       image: "https://via.placeholder.com/400x300",
       tags: ["Component","React js", "Devicon"],
+      githubUrl: "https://github.com/MSaini-Dev/React-Components/tree/main/Infinite%20Logo%20Scroll",
       comp: <TechSlider />,
     },
     {
@@ -43,7 +46,8 @@ const projects = [
       description:
         "Reveals content through an ink-like mask",
       image: "https://via.placeholder.com/400x300",
-      tags: ["Component","React js", "Mask Iamge"],
+      tags: ["Component","React js", "Mask Image"],
+      githubUrl: "https://github.com/MSaini-Dev/React-Components/tree/main/MaskReveal",
       comp: <BackgroundContainer bg={bgImage} zIndex="10" mask={maskImage} className="rounded-xl shadow-lg flex justify-end items-end" >
       <div className="p-6 text-white flex flex-col justify-end items-end z-20">
         <h2 className="text-2xl font-bold">Hello World</h2>
@@ -56,13 +60,17 @@ const projects = [
       description:
         "Reveals content through an ink-like mask",
       image: "https://via.placeholder.com/400x300",
-      tags: ["Component","React js", "Mask Iamge"],
+      tags: ["Component","React js", "Interactive Effects"],
+      githubUrl: "https://github.com/MSaini-Dev/React-Components/tree/main/InteractiveGlowBox",
       comp: 
       <InteractiveGlowBox backgroundImage={bgImage} className="rounded-2xl"/>
     },
     
   ];
 
+  const handleGitHubRedirect = (url: string) => {
+    window.open(url, '_blank', 'noopener,noreferrer');
+  };
 
   return (
     <>    <Helmet>
@@ -90,7 +98,7 @@ const projects = [
   animate={{ opacity: 1, y: 0 }}
   transition={{ duration: 0.8, delay: 0.3 }}
 >
-  <FlipLink href="https://x.com/guri_who">My work</FlipLink>
+  <FlipLink href="https://github.com/MSaini-Dev">My work</FlipLink>
   
   <p 
     className="text-white/54 w-full leading-relaxed"
@@ -128,9 +136,14 @@ const projects = [
               {/* Project Component */}
               {project.comp}
 
-              {/* Action Button - Responsive sizing */}
-              <button className="absolute top-2 right-2 md:top-3 md:right-3 p-1 md:p-2 w-fit h-fit bg-white/10 backdrop-blur-lg border border-white/20 rounded-md shadow-lg text-white hover:bg-gray-500/20 transition-colors z-10 flex items-center justify-center">
-                <ArrowUpRight className="w-4 h-4 md:w-5 md:h-5" />
+              {/* GitHub Link Button - Updated with functionality */}
+              <button  
+                onClick={() => handleGitHubRedirect(project.githubUrl)}
+                className="absolute top-2 right-2 md:top-3 md:right-3 p-1 md:p-2 w-fit h-fit bg-white/10 backdrop-blur-lg border border-white/20 rounded-md shadow-lg text-white hover:bg-gray-500/20 transition-colors z-50 flex items-center justify-center group"
+                title={`View ${project.title} on GitHub`}
+                aria-label={`Open ${project.title} GitHub repository`}
+              >
+                <ArrowUpRight className="w-4 h-4 md:w-5 md:h-5 group-hover:scale-110 transition-transform" />
               </button>
             </motion.div>
 
