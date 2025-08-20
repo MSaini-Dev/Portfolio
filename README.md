@@ -1,69 +1,60 @@
-# React + TypeScript + Vite
+# 🌐 Mohit Saini – Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the source code of my personal **portfolio website**.  
+This site showcases my skills, projects, and professional background as a MERN Stack Developer.  
 
-Currently, two official plugins are available:
+🚀 **Live Site**: [portfolio-mohit-saini.vercel.app](https://portfolio-mohit-saini.vercel.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- 🖼️ **Modern UI/UX** – Clean and minimal design, easy to navigate.  
+- 📱 **Responsive Design** – Works seamlessly on desktop, tablet, and mobile.  
+- 💼 **Projects Showcase** – Highlights my key projects with descriptions and links.  
+- 📑 **Downloadable CV** – CV available directly as a PDF from Google Drive.  
+- ⚡ **Fast Deployment** – Hosted on [Vercel](https://vercel.com/) for reliable performance.  
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## 🛠️ Tech Stack
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- **Frontend**: React + TypeScript + Vite  
+- **Styling**: Tailwind CSS + Framer Motion (animations)  
+- **Deployment**: Vercel  
+- **Version Control**: Git & GitHub  
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 📂 Projects Included
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Some of the projects featured in my portfolio:
+
+1. **BookFair**  
+   - A full-stack book trading platform with user authentication, messaging, and search filters.  
+   - [GitHub Repo](https://github.com/MSaini-Dev/BookFair)  
+
+2. **ClipCrate**  
+   - Chrome Extension for clipboard & color palette management with EyeDropper API.  
+   - [GitHub Repo](https://github.com/MSaini-Dev/ClipCrate)  
+
+3. **ChatAI**  
+   - Real-time chat app with AI-powered responses (React, Node.js, Socket.io).  
+   - [GitHub Repo](https://github.com/MSaini-Dev/ChatAI)  
+
+---
+
+## ⚙️ Getting Started
+
+Clone and run the project locally:
+
+```bash
+# Clone the repo
+git clone https://github.com/MSaini-Dev/Portfolio.git
+cd Portfolio
+
+# Install dependencies
+npm install
+
+# Run development server
+npm run dev
