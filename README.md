@@ -41,16 +41,16 @@ This website showcases my projects, skills, resume, and ways to connect with me.
 ## 📷 Screenshots  
 
 ### 🏠 Home Page  
-![Home Page](./assets/Home.png)  
+![Home Page](./blob/main/src/assets/Home.png)  
 
 ### 📂 Work Page  
-![Projects Page](./assets/Work.png)  
+![Projects Page](./blob/main/src/assets/Work.png)  
 
 ### 📞 Contact Page  
-![Contact Page](./assets/Contact.png)  
+![Contact Page](./blob/main/src/assets/Contact.png)  
 
 ### 📑 About Page  
-![Resume Page](./assets/About.png)  
+![Resume Page](./blob/main/src/assets/About.png)  
 
 *(Make sure your `assets/` folder has these exact filenames. You can rename them if needed.)*  
 
