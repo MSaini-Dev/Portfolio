@@ -5,7 +5,7 @@ import { TextScroll } from "../components/ui/text-scroll";
 
 const Hero = () => {
   return (
-    <div className="min-h-screen w-full p-2 sm:p-3 lg:p-4 flex flex-col justify-center items-center">
+    <div className="min-h-screen w-full p-2 flex flex-col justify-center items-center">
       <motion.section
         className="relative text-center flex flex-col justify-center items-center flex-1 w-full rounded-xl sm:rounded-2xl gap-4 sm:gap-6 lg:gap-8 p-6 sm:p-8 lg:p-12 xl:p-16"
         style={{
@@ -79,7 +79,7 @@ const Hero = () => {
 
       {/* Scrolling Text */}
       <motion.div
-        className="w-full mt-4 sm:mt-6 lg:mt-8"
+        className="w-full mt-4 "
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.8 }}
