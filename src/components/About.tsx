@@ -1,11 +1,12 @@
 import { motion } from 'framer-motion'
 import FlipLink from "../components/ui/text-effect-flipper"
+import { TextScroll } from "../components/ui/text-scroll";
 
 const About = () => {
   return (
     <motion.section
       id="about"
-      className="min-h-screen w-full flex flex-col justify-center items-center gap-8 sm:gap-12 lg:gap-16 px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20"
+      className="min-h-screen w-full flex flex-col justify-center items-center gap-8 sm:gap-12 lg:gap-16  py-16 sm:py-16 lg:py-24 mt-24"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
@@ -83,14 +84,17 @@ const About = () => {
       </motion.div> */}
 
       {/* Call to Action */}
-      <motion.div
-        className="flex flex-col sm:flex-row gap-4 sm:gap-6"
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6, delay: 0.8 }}
+ <motion.div
+        className="w-full mt-4 bg-white "
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.8 }}
       >
-        
+        <TextScroll
+          className="h-fit w-full font-display text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-semibold tracking-tighter text-black  leading-tight sm:leading-tight md:leading-[3rem] lg:leading-[4rem] xl:leading-[5rem]"
+          text="MERN Developer ❋ Full Stack Engineer ❋ React Specialist ❋ "
+          default_velocity={5}
+        />
       </motion.div>
     </motion.section>
   )

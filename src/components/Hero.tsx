@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import bg from "../assets/Background colour _ blue colours _ gradient _ texture - Copy.jpeg";
 import FullscreenToggle from "../components/toggleFullscreen";
-import { TextScroll } from "../components/ui/text-scroll";
 
 const Hero = () => {
   return (
@@ -78,18 +77,7 @@ const Hero = () => {
       </motion.section>
 
       {/* Scrolling Text */}
-      <motion.div
-        className="w-full mt-4 "
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.8 }}
-      >
-        <TextScroll
-          className="h-fit w-full font-display text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-semibold tracking-tighter text-black dark:text-white leading-tight sm:leading-tight md:leading-[3rem] lg:leading-[4rem] xl:leading-[5rem]"
-          text="MERN Developer ❋ Full Stack Engineer ❋ React Specialist ❋ "
-          default_velocity={5}
-        />
-      </motion.div>
+     
     </div>
   );
 };

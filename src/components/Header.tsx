@@ -13,7 +13,7 @@ const Header = () => {
 
   return (
     <motion.header
-      className="fixed top-6 w-fit h-fit left-1/2 transform -translate-x-1/2 z-40 bg-white/10 backdrop-blur-lg border border-white/20 rounded-xl shadow-lg p-1 gap-1"
+      className="fixed top-6 w-fit h-fit left-1/2 transform -translate-x-1/2 z-400 bg-white/10 backdrop-blur-lg border border-white/20 rounded-xl shadow-lg p-1 gap-1"
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
