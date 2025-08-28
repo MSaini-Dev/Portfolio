@@ -62,7 +62,7 @@ const About = () => {
         transition={{ duration: 0.8, delay: 0.8 }}
       >
         <TextScroll
-          className="h-fit w-full font-display text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-semibold tracking-tighter text-black  leading-tight sm:leading-tight md:leading-[3rem] lg:leading-[4rem] xl:leading-[5rem]"
+          className="h-fit w-full font-display text-center text-1xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-semibold tracking-tighter text-black  leading-tight sm:leading-tight md:leading-[3rem] lg:leading-[4rem] xl:leading-[5rem]"
           text="MERN Developer ❋ Full Stack Engineer ❋ React Specialist ❋ "
           default_velocity={5}
         />
