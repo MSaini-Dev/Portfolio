@@ -148,9 +148,9 @@ const projects = [
             </motion.div>
 
             {/* Content Section - Responsive padding and typography */}
-            <div className="p-3 md:p-4 lg:p-5 w-full">
+            <div className="p-1 md:p-2 lg:p-3 w-full">
               <h3
-                className="text-white font-semibold mb-2 md:mb-3 leading-tight"
+                className="text-white font-semibold mb-1 md:mb-1 leading-tight"
                 style={{ fontSize: "16px" }}
               >
                 {project.title}

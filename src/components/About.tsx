@@ -20,7 +20,7 @@ const About = () => {
         viewport={{ once: true }}
         transition={{ duration: 0.6, delay: 0.2 }}
       >
-        <FlipLink href="https://x.com/guri_who">About me</FlipLink>
+        <FlipLink href="">About me</FlipLink>
       </motion.div>
 
       {/* Main Content */}
@@ -32,7 +32,7 @@ const About = () => {
         transition={{ duration: 0.6, delay: 0.4 }}
       >
         <p className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-white/80 leading-relaxed font-light">
-          I'm a passionate <span className="text-white font-medium">MERN stack developer</span> who 
+          I'm Mohit Saini a passionate 22 year old <span className="text-white font-medium">MERN stack developer</span> who 
           transforms creative ideas into powerful digital experiences. With expertise in 
           <span className="text-white font-medium"> MongoDB, Express.js, React, and Node.js</span>, 
           I build full-stack applications that are both visually stunning and functionally robust.
@@ -54,38 +54,9 @@ const About = () => {
 
       </motion.div>
 
-      {/* Skills/Highlights */}
-      {/* <motion.div
-        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 max-w-5xl w-full"
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6, delay: 0.6 }}
-      >
-        <div className="text-center p-4 sm:p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300">
-          <h3 className="text-lg sm:text-xl lg:text-2xl font-semibold text-white mb-2">Frontend</h3>
-          <p className="text-sm sm:text-base text-white/60">React, Next.js, TypeScript, Tailwind CSS</p>
-        </div>
-        
-        <div className="text-center p-4 sm:p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300">
-          <h3 className="text-lg sm:text-xl lg:text-2xl font-semibold text-white mb-2">Backend</h3>
-          <p className="text-sm sm:text-base text-white/60">Node.js, Express.js, MongoDB, PostgreSQL</p>
-        </div>
-        
-        <div className="text-center p-4 sm:p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300">
-          <h3 className="text-lg sm:text-xl lg:text-2xl font-semibold text-white mb-2">Tools</h3>
-          <p className="text-sm sm:text-base text-white/60">Git, Docker, AWS, Vercel, Figma</p>
-        </div>
-        
-        <div className="text-center p-4 sm:p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300">
-          <h3 className="text-lg sm:text-xl lg:text-2xl font-semibold text-white mb-2">Focus</h3>
-          <p className="text-sm sm:text-base text-white/60">Performance, UX/UI, Clean Code, Innovation</p>
-        </div>
-      </motion.div> */}
 
-      {/* Call to Action */}
  <motion.div
-        className="w-full mt-4 bg-white "
+        className="w-full mt-4 bg-white pb-2"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.8 }}

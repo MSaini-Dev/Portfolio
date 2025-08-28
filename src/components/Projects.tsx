@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import FlipLink from "./ui/text-effect-flipper"
-import { ArrowRight ,ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 import ToggleSwitch from "../components/work/work1";
 import TechSlider from "../components/work/TechSlider";
 import BackgroundContainer from "./work/BackgroundContainer";
@@ -9,6 +9,7 @@ import maskImage from "../assets/gif.gif"
 
 import InteractiveGlowBox from "./work/InteractiveGlowBox"
 const Projects = () => {
+
 const projects = [
     {
       id: 1,
@@ -16,6 +17,7 @@ const projects = [
       description: "A toggle Button use mix-blend-difference property",
       image: "https://via.placeholder.com/400x300",
       tags: ["Component","React js", "mix-blend-difference"],
+      githubUrl: "https://github.com/MSaini-Dev/React-Components/tree/main/ToggleButton",
       comp: (
         <ToggleSwitch
           option1="Dark"
@@ -33,6 +35,7 @@ const projects = [
         "A infinite image scroll use devicon for icon",
       image: "https://via.placeholder.com/400x300",
       tags: ["Component","React js", "Devicon"],
+      githubUrl: "https://github.com/MSaini-Dev/React-Components/tree/main/Infinite%20Logo%20Scroll",
       comp: <TechSlider />,
     },
     {
@@ -41,7 +44,8 @@ const projects = [
       description:
         "Reveals content through an ink-like mask",
       image: "https://via.placeholder.com/400x300",
-      tags: ["Component","React js", "Mask Iamge"],
+      tags: ["Component","React js", "Mask Image"],
+      githubUrl: "https://github.com/MSaini-Dev/React-Components/tree/main/MaskReveal",
       comp: <BackgroundContainer bg={bgImage} zIndex="10" mask={maskImage} className="rounded-xl shadow-lg flex justify-end items-end" >
       <div className="p-6 text-white flex flex-col justify-end items-end z-20">
         <h2 className="text-2xl font-bold">Hello World</h2>
@@ -54,12 +58,17 @@ const projects = [
       description:
         "Reveals content through an ink-like mask",
       image: "https://via.placeholder.com/400x300",
-      tags: ["Component","React js", "Mask Iamge"],
+      tags: ["Component","React js", "Interactive Effects"],
+      githubUrl: "https://github.com/MSaini-Dev/React-Components/tree/main/InteractiveGlowBox",
       comp: 
       <InteractiveGlowBox backgroundImage={bgImage} className="rounded-2xl"/>
     },
     
   ];
+
+  const handleGitHubRedirect = (url: string) => {
+    window.open(url, '_blank', 'noopener,noreferrer');
+  };
 
   return (
     <motion.section
@@ -81,7 +90,7 @@ const projects = [
       </motion.h2>
 
        <div className="w-full  columns-[600px] gap-3">
-        {projects.map((project, index) => (
+       {projects.map((project, index) => (
           <motion.div
             key={project.id}
             className="w-full h-fit mb-3 md:mb-4 lg:mb-6 flex bg-black flex-col justify-center items-start border border-border rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300"
@@ -90,13 +99,13 @@ const projects = [
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: index * 0.2 }}
           >
-            <motion.div className="relative w-full aspect-video  border border-border rounded-lg overflow-hidden flex justify-center items-center bg-transparent">
+            <motion.div className="relative w-full aspect-video border border-border rounded-lg overflow-hidden flex justify-center items-center">
               {/* Tags - Responsive positioning and sizing */}
               <div className="absolute top-2 left-2 md:top-3 md:left-3 flex flex-wrap gap-1 md:gap-2 max-w-[60%] sm:max-w-[70%]">
                 {project.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="px-2 py-1+ z-30 md:px-3 md:py-1 bg-white/10 backdrop-blur-lg border border-white/20 rounded-md shadow-lg text-white hover:bg-gray-500/20 transition-colors truncate"
+                    className="px-2 py-1 md:px-3 md:py-1  bg-white/10 backdrop-blur-lg border border-white/20 rounded-md shadow-lg text-white hover:bg-gray-500/20 transition-colors z-50 truncate"
                     style={{ fontSize: "14px" }}
                   >
                     {tag}
@@ -107,16 +116,21 @@ const projects = [
               {/* Project Component */}
               {project.comp}
 
-              {/* Action Button - Responsive sizing */}
-              <button className="absolute top-2 right-2 md:top-3 md:right-3 p-1 md:p-2 w-fit h-fit bg-white/10 backdrop-blur-lg border border-white/20 rounded-md shadow-lg text-white hover:bg-gray-500/20 transition-colors z-10 flex items-center justify-center">
-                <ArrowUpRight className="w-4 h-4 md:w-5 md:h-5" />
+              {/* GitHub Link Button - Updated with functionality */}
+              <button  
+                onClick={() => handleGitHubRedirect(project.githubUrl)}
+                className="absolute top-2 right-2 md:top-3 md:right-3 p-1 md:p-2 w-fit h-fit bg-white/10 backdrop-blur-lg border border-white/20 rounded-md shadow-lg text-white hover:bg-gray-500/20 transition-colors z-50 flex items-center justify-center group"
+                title={`View ${project.title} on GitHub`}
+                aria-label={`Open ${project.title} GitHub repository`}
+              >
+                <ArrowUpRight className="w-4 h-4 md:w-5 md:h-5 group-hover:scale-110 transition-transform" />
               </button>
             </motion.div>
 
             {/* Content Section - Responsive padding and typography */}
-            <div className="p-3 md:p-4 lg:p-5 w-full">
+              <div className="p-1 md:p-2 lg:p-3 w-full">
               <h3
-                className="text-white font-semibold mb-2 md:mb-3 leading-tight"
+                className="text-white font-semibold mb-1 md:mb-1 leading-tight"
                 style={{ fontSize: "16px" }}
               >
                 {project.title}
@@ -131,7 +145,7 @@ const projects = [
           </motion.div>
         ))}
       </div>
-      <motion.a href="/work" className="flex justify-center items-center">See all<ArrowRight /></motion.a>
+      <motion.a href="/work" className="flex justify-center items-center md:top-3 md:right-3 py-1 px-3 md:py-2 md:px-3 w-fit h-fit bg-white/10 backdrop-blur-lg border border-white/20 rounded-md shadow-lg text-white hover:bg-gray-500/20 transition-colors z-10 ">See all</motion.a>
     </motion.section>
   );
 };

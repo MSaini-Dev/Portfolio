@@ -45,7 +45,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            I create modern web solutions that deliver exceptional user
+            I'm Mohit Saini and I create modern web solutions that deliver exceptional user
             experiences and robust backend functionality.
           </motion.p>
         </div>

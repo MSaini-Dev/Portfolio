@@ -65,22 +65,10 @@ const AboutPage = () => {
             transition={{ duration: 0.6, delay: 0.8 }}
           >
             <p className="text-sm sm:text-base lg:text-lg text-white/80 leading-relaxed">
-              I'm a passionate MERN stack developer with a keen eye for creating seamless 
-              digital experiences. My journey in web development started with curiosity 
-              and has evolved into a deep love for building applications that not only 
-              look great but also solve real-world problems.
+              Hello! I'm Mohit Saini, a passionate and dedicated Fullstack Developer based in Jaipur, with a strong command of the MERN stack (MongoDB, Express.js, React.js, and Node.js). I specialize in building modern, responsive, and user-centric web applications from the ground up. My development process is driven by a commitment to writing clean, efficient code and implementing best practices in version control with Git to create scalable and impactful digital solutions.
             </p>
             <p className="text-sm sm:text-base lg:text-lg text-white/80 leading-relaxed">
-              With expertise in MongoDB, Express.js, React, and Node.js, I focus on 
-              creating full-stack solutions that are both scalable and user-friendly. 
-              I believe in writing clean, maintainable code and staying updated with 
-              the latest technologies to deliver the best possible results.
-            </p>
-            <p className="text-sm sm:text-base lg:text-lg text-white/80 leading-relaxed">
-              When I'm not coding, you'll find me exploring new technologies, 
-              contributing to open-source projects, or sharing knowledge with the 
-              developer community. I'm always excited to take on new challenges 
-              and collaborate on innovative projects.
+             My expertise spans both front-end and back-end development, where I leverage technologies like React, Tailwind CSS, and TypeScript to create dynamic and intuitive user interfaces. On the server side, I enjoy architecting robust systems using Node.js, Express.js, and RESTful APIs, with a focus on secure authentication, real-time functionality using WebSockets, and efficient database management with MongoDB. I am particularly adept at integrating powerful third-party services like Supabase and Firebase to enhance application capabilities.
             </p>
           </motion.div>
         </div>
@@ -107,21 +95,21 @@ const AboutPage = () => {
           <div className="flex flex-col items-center text-center p-4 sm:p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10">
             <h3 className="text-lg sm:text-xl font-semibold text-white mb-2">Frontend</h3>
             <p className="text-sm sm:text-base text-white/60">
-              React, Next.js, TypeScript, Tailwind CSS
+              React, TypeScript, Tailwind CSS
             </p>
           </div>
           
           <div className="flex flex-col items-center text-center p-4 sm:p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10">
             <h3 className="text-lg sm:text-xl font-semibold text-white mb-2">Backend</h3>
             <p className="text-sm sm:text-base text-white/60">
-              Node.js, Express.js, MongoDB, PostgreSQL
+              Node.js, Express.js, MongoDB, RESTful APIs
             </p>
           </div>
           
           <div className="flex flex-col items-center text-center p-4 sm:p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 sm:col-span-2 lg:col-span-1">
             <h3 className="text-lg sm:text-xl font-semibold text-white mb-2">Tools</h3>
             <p className="text-sm sm:text-base text-white/60">
-              Git, Cursor, VS Code, Vercel, Figma
+              Git, Cursor, VS Code, Vercel, Figma, Render
             </p>
           </div>
         </motion.div>
