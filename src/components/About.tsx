@@ -32,24 +32,20 @@ const About = () => {
         transition={{ duration: 0.6, delay: 0.4 }}
       >
         <p className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-white/80 leading-relaxed font-light">
-          I'm Mohit Saini a passionate 22 year old <span className="text-white font-medium">MERN stack developer</span> who 
-          transforms creative ideas into powerful digital experiences. With expertise in 
-          <span className="text-white font-medium"> MongoDB, Express.js, React, and Node.js</span>, 
-          I build full-stack applications that are both visually stunning and functionally robust.
+          I'm Mohit Saini, an <span className="text-white font-medium">AI & Full-Stack Engineer</span> specializing in 
+          <span className="text-white font-medium"> Generative AI, Multi-Agent Systems, RAG, Machine Learning, and Enterprise Data Pipelines</span>. 
+          I build intelligent, production-ready applications that transform complex data into autonomous digital experiences.
         </p>
 
      <p className="text-[14px] text-white/60 leading-relaxed">
-  My approach combines clean, scalable code with intuitive user interfaces, 
-  ensuring every project delivers exceptional performance and user satisfaction. 
-  I believe in writing maintainable code and staying current with the latest 
-  technologies to create solutions that stand the test of time.
+  My technical stack spans advanced AI frameworks (<span className="text-white font-medium">PyTorch, Scikit-Learn, LangChain, LangGraph, LlamaIndex, Ragas</span>), 
+  scalable microservices with <span className="text-white font-medium">FastAPI, Docker & PostgreSQL/MongoDB/SQL</span>, 
+  and big data processing using <span className="text-white font-medium">PySpark, Pandas, Databricks, and Palantir</span>.
 </p>
 
 <p className="text-[14px] text-white/60 leading-relaxed">
-  When I'm not coding, you'll find me exploring emerging technologies, 
-  contributing to open-source projects, and sharing knowledge with the 
-  developer community. I'm always excited to collaborate on innovative 
-  projects that make a real impact.
+  Whether architecting autonomous multi-agent workflows, fine-tuning RAG systems, or orchestrating data pipelines, 
+  I focus on clean, scalable code and cutting-edge AI integration to create solutions that deliver real-world impact.
 </p>
 
       </motion.div>
@@ -63,7 +59,7 @@ const About = () => {
       >
         <TextScroll
           className="h-fit w-full font-display text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-semibold tracking-tighter text-black  leading-tight sm:leading-tight md:leading-[3rem] lg:leading-[4rem] xl:leading-[5rem]"
-          text="MERN Developer ❋ Full Stack Engineer ❋ React Specialist ❋ "
+          text="AI Engineer ❋ Multi-Agent Systems ❋ GenAI & RAG ❋ Data Engineering ❋ Full Stack ❋ "
           default_velocity={5}
         />
       </motion.div>

@@ -1,20 +1,19 @@
 
 const TechSlider = () => {
   const techIcons = [
-    "devicon-react-original",
-    "devicon-html5-plain",
-    "devicon-css3-plain",
-    "devicon-javascript-plain",
-    "devicon-tailwindcss-original",
-    "devicon-framermotion-original",
-    "devicon-nodejs-plain",
-    "devicon-npm-original-wordmark",
-    "devicon-express-original",
+    "devicon-python-plain",
+    "devicon-pytorch-original",
+    "devicon-fastapi-plain",
+    "devicon-docker-plain",
+    "devicon-postgresql-plain",
     "devicon-mongodb-plain",
-    "devicon-mongoose-original",
-    "devicon-vscode-plain",
-    "devicon-github-original",
+    "devicon-pandas-plain",
+    "devicon-matplotlib-plain",
+    "devicon-react-original",
+    "devicon-nodejs-plain",
+    "devicon-javascript-plain",
     "devicon-git-plain",
+    "devicon-github-original",
   ];
 
   return (

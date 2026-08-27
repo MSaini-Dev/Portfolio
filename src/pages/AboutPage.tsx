@@ -65,10 +65,10 @@ const AboutPage = () => {
             transition={{ duration: 0.6, delay: 0.8 }}
           >
             <p className="text-sm sm:text-base lg:text-lg text-white/80 leading-relaxed">
-              Hello! I'm Mohit Saini, a passionate and dedicated Fullstack Developer based in Jaipur, with a strong command of the MERN stack (MongoDB, Express.js, React.js, and Node.js). I specialize in building modern, responsive, and user-centric web applications from the ground up. My development process is driven by a commitment to writing clean, efficient code and implementing best practices in version control with Git to create scalable and impactful digital solutions.
+              Hello! I'm Mohit Saini, an AI Engineer and Data Solutions Architect. I specialize in building end-to-end intelligent systems, leveraging Generative AI, Multi-Agent architectures, and robust RAG (Retrieval-Augmented Generation) pipelines alongside scalable web technologies.
             </p>
             <p className="text-sm sm:text-base lg:text-lg text-white/80 leading-relaxed">
-             My expertise spans both front-end and back-end development, where I leverage technologies like React, Tailwind CSS, and TypeScript to create dynamic and intuitive user interfaces. On the server side, I enjoy architecting robust systems using Node.js, Express.js, and RESTful APIs, with a focus on secure authentication, real-time functionality using WebSockets, and efficient database management with MongoDB. I am particularly adept at integrating powerful third-party services like Supabase and Firebase to enhance application capabilities.
+              My technical expertise bridges Machine Learning / Deep Learning framework capabilities (PyTorch, Scikit-Learn), Agentic AI orchestration (LangChain, LangGraph, LlamaIndex, Ragas), high-performance backend microservices (FastAPI, Docker, PostgreSQL, MongoDB), and big-data analytics engines (PySpark, Databricks, Palantir, Pandas, Matplotlib).
             </p>
           </motion.div>
         </div>
@@ -85,31 +85,38 @@ const AboutPage = () => {
           </div>
         </motion.div>
 
-        {/* Skills/Experience Section (Optional Enhancement) */}
+        {/* Skills/Experience Section */}
         <motion.div 
-          className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mt-8 sm:mt-12"
+          className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mt-8 sm:mt-12"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.2 }}
         >
           <div className="flex flex-col items-center text-center p-4 sm:p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10">
-            <h3 className="text-lg sm:text-xl font-semibold text-white mb-2">Frontend</h3>
+            <h3 className="text-lg sm:text-xl font-semibold text-white mb-2">GenAI & Agents</h3>
             <p className="text-sm sm:text-base text-white/60">
-              React, TypeScript, Tailwind CSS
+              Agentic AI, Multi-Agent Systems, RAG, LangChain, LangGraph, LlamaIndex, Ragas
             </p>
           </div>
           
           <div className="flex flex-col items-center text-center p-4 sm:p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10">
-            <h3 className="text-lg sm:text-xl font-semibold text-white mb-2">Backend</h3>
+            <h3 className="text-lg sm:text-xl font-semibold text-white mb-2">ML & Deep Learning</h3>
             <p className="text-sm sm:text-base text-white/60">
-              Node.js, Express.js, MongoDB, RESTful APIs
+              Roboflow, PyTorch, Scikit-Learn, Pandas, Matplotlib
             </p>
           </div>
           
-          <div className="flex flex-col items-center text-center p-4 sm:p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 sm:col-span-2 lg:col-span-1">
-            <h3 className="text-lg sm:text-xl font-semibold text-white mb-2">Tools</h3>
+          <div className="flex flex-col items-center text-center p-4 sm:p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10">
+            <h3 className="text-lg sm:text-xl font-semibold text-white mb-2">Data & Cloud</h3>
             <p className="text-sm sm:text-base text-white/60">
-              Git, Cursor, VS Code, Vercel, Figma, Render
+              PySpark, Databricks, Palantir, PostgreSQL, MongoDB, SQL, Docker
+            </p>
+          </div>
+
+          <div className="flex flex-col items-center text-center p-4 sm:p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10">
+            <h3 className="text-lg sm:text-xl font-semibold text-white mb-2">Full-Stack & APIs</h3>
+            <p className="text-sm sm:text-base text-white/60">
+              FastAPI, React, Node.js, Express.js, TypeScript, RESTful APIs
             </p>
           </div>
         </motion.div>
